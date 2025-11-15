@@ -1,0 +1,9 @@
+.env
+
+/auth/*
+/vendor/
+/.idea/*
+/.vscode/*
+/.DS_Store
+/phpstan.neon
+/phpstan-baseline.neon 

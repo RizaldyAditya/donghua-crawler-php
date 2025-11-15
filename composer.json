@@ -1,0 +1,26 @@
+{
+    "name": "crawler/donghua",
+    "description": "Crawler Script for streaming website contains Donghua Movi[动画]",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RizaldyAditya",
+            "email": "rizaldy.aditya.n@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "crwlr/crawler": "^3.5",
+        "google/apiclient": "^2.18",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Sheets"
+        ]
+    }
+}
