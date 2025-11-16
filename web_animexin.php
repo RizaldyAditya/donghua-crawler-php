@@ -84,6 +84,7 @@ foreach ($crawler->run() as $result) {
             }
         }
     } catch (Exception $e) { // Catch any errors during the API calls
-        error_log('Error writing to Google Sheets: ' . $e->getMessage(), 3, __DIR__ . 'logs/error.log');
+        error_log('Error writing to Google Sheets: ' . $e->getMessage() . "\n", 3, __DIR__ . '/logs/error.log');
+        die();
     }
 }
