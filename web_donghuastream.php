@@ -34,7 +34,7 @@ $client->addScope(Sheets::SPREADSHEETS);
 // Create the Sheets service
 $service       = new Google_Service_Sheets($client);
 $spreadsheetId = $_ENV['SPREADSHEET_ID'] ?? '';
-$range         = 'Donghua!T3:V500';
+$range         = '动画!T3:V500';
 
 foreach ($crawler->run() as $result) {
     $data = $result->toArray();
@@ -67,7 +67,7 @@ foreach ($crawler->run() as $result) {
 
             // Update the row if found and write is needed
             if (! empty($foundRow) && $write) {
-                $updateRange = 'Donghua!V' . $foundRow . ':X' . $foundRow;
+                $updateRange = '动画!V' . $foundRow . ':X' . $foundRow;
                 $updateBody  = new Google_Service_Sheets_ValueRange([
                     'values' => [[
                         episode_number($data['episode']),
