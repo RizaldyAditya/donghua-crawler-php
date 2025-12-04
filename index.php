@@ -18,6 +18,7 @@ class MyCrawler extends HttpCrawler
  * Supported websites:
  * https: //animexin.dev/
  * https: //donghuastream.org/
+ * https: //animekhor.org/
 */
 
 // Load environment variables
@@ -72,6 +73,9 @@ switch ($web) {
         break;
     case 'donghuastream':
         require __DIR__ . '/web_donghuastream.php';
+        break;
+    case 'animekhor':
+        require __DIR__ . '/web_animekhor.php';
         break;
     default:
         die('The provided URL is not supported.');
